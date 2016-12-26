@@ -1,0 +1,54 @@
+st login: Mon Dec 26 16:58:14 on ttys003
+xunandeMacBook-Pro:~ xunan$ cd Documents/
+xunandeMacBook-Pro:Documents xunan$ s
+-bash: s: command not found
+xunandeMacBook-Pro:Documents xunan$ ls
+Data			Project			workSpace
+Microsoft 用户数据	Swift项目		书籍资料
+Parallels		python			桌面壁纸
+xunandeMacBook-Pro:Documents xunan$ cd Project/
+xunandeMacBook-Pro:Project xunan$ ls
+CLTMeituan			XNStatusBarHUD
+LiNingOffline			XNTagViewDemo
+XNAlertViewDemo			XNToolDemo
+XNAlipay_Swift			XNWeiBo_Swift
+XNBaiduLocationManagerDemo	iOSLiNingDZ
+XNLiNing			newShares
+XNSegmentControlDemo		newShares.zip
+xunandeMacBook-Pro:Project xunan$ cd XNStatusBarHUD/
+xunandeMacBook-Pro:XNStatusBarHUD xunan$ ls
+LICENSE			XNStatusBarHUD		XNStatusBarHUDDemo
+README.md		XNStatusBarHUD.podspec
+xunandeMacBook-Pro:XNStatusBarHUD xunan$ ls -a
+.			.gitignore		XNStatusBarHUD.podspec
+..			LICENSE			XNStatusBarHUDDemo
+.DS_Store		README.md
+.git			XNStatusBarHUD
+xunandeMacBook-Pro:XNStatusBarHUD xunan$ vim .gitignore 
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/screenshots
+Podfile.lock
+Pods/
+#Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+
+
