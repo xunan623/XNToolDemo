@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710F04561E10C05900D975BD /* UITextField+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 710F04551E10C05900D975BD /* UITextField+Ext.m */; };
+		710F04591E10C24E00D975BD /* NSObject+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 710F04581E10C24E00D975BD /* NSObject+Notification.m */; };
 		7128DCEA1E0B654800656DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCE91E0B654800656DC0 /* main.m */; };
 		7128DCED1E0B654800656DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEC1E0B654800656DC0 /* AppDelegate.m */; };
 		7128DCF01E0B654800656DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEF1E0B654800656DC0 /* ViewController.m */; };
 		7128DCF31E0B654800656DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF11E0B654800656DC0 /* Main.storyboard */; };
 		7128DCF51E0B654800656DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF41E0B654800656DC0 /* Assets.xcassets */; };
 		7128DCF81E0B654800656DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF61E0B654800656DC0 /* LaunchScreen.storyboard */; };
+		7128DD021E0B662800656DC0 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DD011E0B662800656DC0 /* Foundation+Log.m */; };
+		7128DD071E0B668200656DC0 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DD041E0B668200656DC0 /* NSString+Ext.m */; };
+		7128DD081E0B668200656DC0 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DD061E0B668200656DC0 /* UIImage+Reflection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		710F04541E10C05900D975BD /* UITextField+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Ext.h"; sourceTree = "<group>"; };
+		710F04551E10C05900D975BD /* UITextField+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Ext.m"; sourceTree = "<group>"; };
+		710F04571E10C24E00D975BD /* NSObject+Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Notification.h"; sourceTree = "<group>"; };
+		710F04581E10C24E00D975BD /* NSObject+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Notification.m"; sourceTree = "<group>"; };
 		7128DCE51E0B654800656DC0 /* XNToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7128DCE91E0B654800656DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7128DCEB1E0B654800656DC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +35,11 @@
 		7128DCF41E0B654800656DC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7128DCF71E0B654800656DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7128DCF91E0B654800656DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7128DD011E0B662800656DC0 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		7128DD031E0B668200656DC0 /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
+		7128DD041E0B668200656DC0 /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
+		7128DD051E0B668200656DC0 /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
+		7128DD061E0B668200656DC0 /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 		7128DCE71E0B654800656DC0 /* XNToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7128DCFF1E0B656F00656DC0 /* XNTool */,
 				7128DCEB1E0B654800656DC0 /* AppDelegate.h */,
 				7128DCEC1E0B654800656DC0 /* AppDelegate.m */,
 				7128DCEE1E0B654800656DC0 /* ViewController.h */,
@@ -77,6 +92,30 @@
 				7128DCE91E0B654800656DC0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7128DCFF1E0B656F00656DC0 /* XNTool */ = {
+			isa = PBXGroup;
+			children = (
+				7128DD001E0B660A00656DC0 /* Category */,
+			);
+			path = XNTool;
+			sourceTree = "<group>";
+		};
+		7128DD001E0B660A00656DC0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				710F04571E10C24E00D975BD /* NSObject+Notification.h */,
+				710F04581E10C24E00D975BD /* NSObject+Notification.m */,
+				7128DD031E0B668200656DC0 /* NSString+Ext.h */,
+				7128DD041E0B668200656DC0 /* NSString+Ext.m */,
+				7128DD051E0B668200656DC0 /* UIImage+Reflection.h */,
+				7128DD061E0B668200656DC0 /* UIImage+Reflection.m */,
+				7128DD011E0B662800656DC0 /* Foundation+Log.m */,
+				710F04541E10C05900D975BD /* UITextField+Ext.h */,
+				710F04551E10C05900D975BD /* UITextField+Ext.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +192,12 @@
 			files = (
 				7128DCF01E0B654800656DC0 /* ViewController.m in Sources */,
 				7128DCED1E0B654800656DC0 /* AppDelegate.m in Sources */,
+				7128DD071E0B668200656DC0 /* NSString+Ext.m in Sources */,
 				7128DCEA1E0B654800656DC0 /* main.m in Sources */,
+				710F04591E10C24E00D975BD /* NSObject+Notification.m in Sources */,
+				7128DD081E0B668200656DC0 /* UIImage+Reflection.m in Sources */,
+				710F04561E10C05900D975BD /* UITextField+Ext.m in Sources */,
+				7128DD021E0B662800656DC0 /* Foundation+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +354,7 @@
 				7128DCFE1E0B654800656DC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
