@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		710F04561E10C05900D975BD /* UITextField+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 710F04551E10C05900D975BD /* UITextField+Ext.m */; };
 		710F04591E10C24E00D975BD /* NSObject+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 710F04581E10C24E00D975BD /* NSObject+Notification.m */; };
+		710F045C1E10C43500D975BD /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 710F045B1E10C43500D975BD /* NSDate+Ext.m */; };
 		7128DCEA1E0B654800656DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCE91E0B654800656DC0 /* main.m */; };
 		7128DCED1E0B654800656DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEC1E0B654800656DC0 /* AppDelegate.m */; };
 		7128DCF01E0B654800656DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEF1E0B654800656DC0 /* ViewController.m */; };
@@ -25,6 +26,8 @@
 		710F04551E10C05900D975BD /* UITextField+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Ext.m"; sourceTree = "<group>"; };
 		710F04571E10C24E00D975BD /* NSObject+Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Notification.h"; sourceTree = "<group>"; };
 		710F04581E10C24E00D975BD /* NSObject+Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Notification.m"; sourceTree = "<group>"; };
+		710F045A1E10C43500D975BD /* NSDate+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
+		710F045B1E10C43500D975BD /* NSDate+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Ext.m"; sourceTree = "<group>"; };
 		7128DCE51E0B654800656DC0 /* XNToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7128DCE91E0B654800656DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7128DCEB1E0B654800656DC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				7128DD011E0B662800656DC0 /* Foundation+Log.m */,
 				710F04541E10C05900D975BD /* UITextField+Ext.h */,
 				710F04551E10C05900D975BD /* UITextField+Ext.m */,
+				710F045A1E10C43500D975BD /* NSDate+Ext.h */,
+				710F045B1E10C43500D975BD /* NSDate+Ext.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				7128DD071E0B668200656DC0 /* NSString+Ext.m in Sources */,
 				7128DCEA1E0B654800656DC0 /* main.m in Sources */,
 				710F04591E10C24E00D975BD /* NSObject+Notification.m in Sources */,
+				710F045C1E10C43500D975BD /* NSDate+Ext.m in Sources */,
 				7128DD081E0B668200656DC0 /* UIImage+Reflection.m in Sources */,
 				710F04561E10C05900D975BD /* UITextField+Ext.m in Sources */,
 				7128DD021E0B662800656DC0 /* Foundation+Log.m in Sources */,

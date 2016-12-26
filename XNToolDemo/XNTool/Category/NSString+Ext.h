@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonDigest.h>
+#import <UIKit/UIKit.h>
 
 
 @interface NSString (Ext)
