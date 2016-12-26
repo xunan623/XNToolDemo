@@ -19,6 +19,10 @@
 		7128DD021E0B662800656DC0 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DD011E0B662800656DC0 /* Foundation+Log.m */; };
 		7128DD071E0B668200656DC0 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DD041E0B668200656DC0 /* NSString+Ext.m */; };
 		7128DD081E0B668200656DC0 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DD061E0B668200656DC0 /* UIImage+Reflection.m */; };
+		71F4C5031E1110B400472635 /* RWDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C5001E1110B400472635 /* RWDatabase.m */; };
+		71F4C5041E1110B400472635 /* RWDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C5021E1110B400472635 /* RWDatabaseManager.m */; };
+		71F4C5071E1110BF00472635 /* CocoaCracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C5061E1110BF00472635 /* CocoaCracker.m */; };
+		71F4C50A1E11110800472635 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F4C5091E11110800472635 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,14 @@
 		7128DD041E0B668200656DC0 /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		7128DD051E0B668200656DC0 /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
 		7128DD061E0B668200656DC0 /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
+		71F4C4F51E110EB100472635 /* XNConstDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XNConstDefine.h; sourceTree = "<group>"; };
+		71F4C4FF1E1110B400472635 /* RWDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDatabase.h; sourceTree = "<group>"; };
+		71F4C5001E1110B400472635 /* RWDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDatabase.m; sourceTree = "<group>"; };
+		71F4C5011E1110B400472635 /* RWDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDatabaseManager.h; sourceTree = "<group>"; };
+		71F4C5021E1110B400472635 /* RWDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDatabaseManager.m; sourceTree = "<group>"; };
+		71F4C5051E1110BF00472635 /* CocoaCracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaCracker.h; sourceTree = "<group>"; };
+		71F4C5061E1110BF00472635 /* CocoaCracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaCracker.m; sourceTree = "<group>"; };
+		71F4C5091E11110800472635 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F4C50A1E11110800472635 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			children = (
 				7128DCE71E0B654800656DC0 /* XNToolDemo */,
 				7128DCE61E0B654800656DC0 /* Products */,
+				71F4C5081E11110700472635 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +114,7 @@
 		7128DCFF1E0B656F00656DC0 /* XNTool */ = {
 			isa = PBXGroup;
 			children = (
+				71F4C4FD1E11104800472635 /* DataHelper */,
 				7128DD001E0B660A00656DC0 /* Category */,
 			);
 			path = XNTool;
@@ -119,8 +134,38 @@
 				710F04551E10C05900D975BD /* UITextField+Ext.m */,
 				710F045A1E10C43500D975BD /* NSDate+Ext.h */,
 				710F045B1E10C43500D975BD /* NSDate+Ext.m */,
+				71F4C4F51E110EB100472635 /* XNConstDefine.h */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		71F4C4FD1E11104800472635 /* DataHelper */ = {
+			isa = PBXGroup;
+			children = (
+				71F4C5051E1110BF00472635 /* CocoaCracker.h */,
+				71F4C5061E1110BF00472635 /* CocoaCracker.m */,
+				71F4C4FE1E1110B400472635 /* Database */,
+			);
+			path = DataHelper;
+			sourceTree = "<group>";
+		};
+		71F4C4FE1E1110B400472635 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				71F4C4FF1E1110B400472635 /* RWDatabase.h */,
+				71F4C5001E1110B400472635 /* RWDatabase.m */,
+				71F4C5011E1110B400472635 /* RWDatabaseManager.h */,
+				71F4C5021E1110B400472635 /* RWDatabaseManager.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		71F4C5081E11110700472635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71F4C5091E11110800472635 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +245,13 @@
 				7128DD071E0B668200656DC0 /* NSString+Ext.m in Sources */,
 				7128DCEA1E0B654800656DC0 /* main.m in Sources */,
 				710F04591E10C24E00D975BD /* NSObject+Notification.m in Sources */,
+				71F4C5031E1110B400472635 /* RWDatabase.m in Sources */,
 				710F045C1E10C43500D975BD /* NSDate+Ext.m in Sources */,
 				7128DD081E0B668200656DC0 /* UIImage+Reflection.m in Sources */,
 				710F04561E10C05900D975BD /* UITextField+Ext.m in Sources */,
+				71F4C5071E1110BF00472635 /* CocoaCracker.m in Sources */,
 				7128DD021E0B662800656DC0 /* Foundation+Log.m in Sources */,
+				71F4C5041E1110B400472635 /* RWDatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
