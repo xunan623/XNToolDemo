@@ -25,10 +25,14 @@
                                     width:(CGFloat)width
                              andLineSpace:(CGFloat)lineSpace;
 
+/** 计算文字宽高 */
+- (CGSize)stringSize:(UIFont *)font regularHeight:(CGFloat)height;
 
 
 - (BOOL)hasSerialNumber:(NSUInteger)num;
+/** 判断是否是纯数字 */
 - (BOOL)isPureInt;
+/** 判断是否是空字符串 */
 - (BOOL)matchBlankSpace;
 
 /** 判断国家码 */
@@ -54,3 +58,82 @@
 +(NSString *) utf8ToUnicode:(NSString *)string;
 
 @end
+
+#pragma mark 字符串改变
+
+@interface NSString (MJExtension)
+/**
+ *  驼峰转下划线（loveYou -> love_you）
+ */
+- (NSString *)underlineFromCamel;
+/**
+ *  下划线转驼峰（love_you -> loveYou）
+ */
+- (NSString *)camelFromUnderline;
+/**
+ * 首字母变大写
+ */
+- (NSString *)firstCharUpper;
+/**
+ * 首字母变小写
+ */
+- (NSString *)firstCharLower;
+
+- (BOOL)isPureInt;
+
+- (NSURL *)url;
+@end
+
+#pragma mark-  FolderPath
+
+@interface NSString (FolderPath)
+
+/*!
+ *  获取沙盒下documens文件夹路径
+ */
++ (NSString *)documentsPath;
+
+/*!
+ *  获取沙盒下caches文件夹路径
+ */
++ (NSString *)cachesPath;
+
+/*!
+ *  获取沙盒下documens文件夹中 文件或者文件夹的完整路径
+ */
++ (NSString *)documentsContentDirectory:(NSString *)name;
+
+/*!
+ *  获取沙盒下caches文件夹中 文件或者文件夹的完整路径
+ */
++ (NSString *)cachesContentDirectory:(NSString *)name;
+
+@end
+
+
+#pragma mark-  Project
+
+@interface NSString (Project)
+
+/** 获取当前工程的发布版本 */
++ (NSString *)shortVersion;
+
+/** 获取当前工程的内部版本 */
++ (NSInteger)buildVersion;
+
+/** 获取当前工程的唯一标识 */
++ (NSString *)identifier;
+
+/** 从mainBundle中根据key获取信息 */
++ (NSString *)objectFromMainBundleForKey:(NSString *)key;
+
+/** 生成UUID */
++ (NSString *)uuid;
+
+@end
+
+
+
+
+
+

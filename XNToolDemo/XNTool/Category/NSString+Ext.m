@@ -75,6 +75,20 @@
     return stringRect.size.height;
 }
 
+- (CGSize)stringSize:(UIFont *)font regularHeight:(CGFloat)height {
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self];
+    NSDictionary *attrSyleDict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  font, NSFontAttributeName,
+                                  nil];
+    
+    [attributedString addAttributes:attrSyleDict
+                              range:NSMakeRange(0, self.length)];
+    CGRect stringRect = [attributedString boundingRectWithSize:CGSizeMake(MAXFLOAT, height)
+                                                       options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                                       context:nil];
+    return stringRect.size;
+}
+
 #pragma mark-  是否有连续几位的数字
 
 - (BOOL)hasSerialNumber:(NSUInteger)num {
@@ -187,45 +201,45 @@
         
     {
         
-//        unichar _char = [string characterAtIndex:i];
+        unichar _char = [string characterAtIndex:i];
         
-//        //判断是否为英文和数字
-//        
-//        if (_char <= '9' && _char >= '0')
-//            
-//        {
-//            
-//            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i, 1)]];
-//            
-//        }
-//        
-//        else if(_char >= 'a' && _char <= 'z')
-//            
-//        {
-//            
-//            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i, 1)]];
-//            
-//            
-//            
-//        }
-//        
-//        else if(_char >= 'A' && _char <= 'Z')
-//            
-//        {
-//            
-//            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i, 1)]];
-//            
-//            
-//            
-//        }
-//        
-//        else
-//            
-//        {
+        //判断是否为英文和数字
+        
+        if (_char <= '9' && _char >= '0')
+            
+        {
+            
+            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i, 1)]];
+            
+        }
+        
+        else if(_char >= 'a' && _char <= 'z')
+            
+        {
+            
+            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i, 1)]];
+            
+            
+            
+        }
+        
+        else if(_char >= 'A' && _char <= 'Z')
+            
+        {
+            
+            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i, 1)]];
+            
+            
+            
+        }
+        
+        else
+            
+        {
         
             [s appendFormat:@"\\u%x",[string characterAtIndex:i]];
             
-//        }
+        }
         
     }
     
@@ -234,3 +248,144 @@
 }
 
 @end
+
+
+
+@implementation NSString (MJExtension)
+- (NSString *)underlineFromCamel
+{
+    if (self.length == 0) return self;
+    NSMutableString *string = [NSMutableString string];
+    for (NSUInteger i = 0; i<self.length; i++) {
+        unichar c = [self characterAtIndex:i];
+        NSString *cString = [NSString stringWithFormat:@"%c", c];
+        NSString *cStringLower = [cString lowercaseString];
+        if ([cString isEqualToString:cStringLower]) {
+            [string appendString:cStringLower];
+        } else {
+            [string appendString:@"_"];
+            [string appendString:cStringLower];
+        }
+    }
+    return string;
+}
+
+- (NSString *)camelFromUnderline
+{
+    if (self.length == 0) return self;
+    NSMutableString *string = [NSMutableString string];
+    NSArray *cmps = [self componentsSeparatedByString:@"_"];
+    for (NSUInteger i = 0; i<cmps.count; i++) {
+        NSString *cmp = cmps[i];
+        if (i && cmp.length) {
+            [string appendString:[NSString stringWithFormat:@"%c", [cmp characterAtIndex:0]].uppercaseString];
+            if (cmp.length >= 2) [string appendString:[cmp substringFromIndex:1]];
+        } else {
+            [string appendString:cmp];
+        }
+    }
+    return string;
+}
+
+- (NSString *)firstCharLower
+{
+    if (self.length == 0) return self;
+    NSMutableString *string = [NSMutableString string];
+    [string appendString:[NSString stringWithFormat:@"%c", [self characterAtIndex:0]].lowercaseString];
+    if (self.length >= 2) [string appendString:[self substringFromIndex:1]];
+    return string;
+}
+
+- (NSString *)firstCharUpper
+{
+    if (self.length == 0) return self;
+    NSMutableString *string = [NSMutableString string];
+    [string appendString:[NSString stringWithFormat:@"%c", [self characterAtIndex:0]].uppercaseString];
+    if (self.length >= 2) [string appendString:[self substringFromIndex:1]];
+    return string;
+}
+
+- (BOOL)isPureInt
+{
+    NSScanner *scan = [NSScanner scannerWithString:self];
+    int val;
+    return [scan scanInt:&val] && [scan isAtEnd];
+}
+
+- (NSURL *)url
+{
+    return [NSURL URLWithString:(NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self,(CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8))];
+}
+@end
+
+
+
+#pragma mark-  FolderPath
+
+@implementation NSString (FolderPath)
+
++ (NSString *)documentsPath {
+    return [self searchPathFrom:NSDocumentDirectory];
+}
+
++ (NSString *)cachesPath {
+    return [self searchPathFrom:NSCachesDirectory];
+}
+
++ (NSString *)documentsContentDirectory:(NSString *)name {
+    return [NSString stringWithFormat:@"%@/%@", [self documentsPath], name];
+}
+
++ (NSString *)cachesContentDirectory:(NSString *)name {
+    return [NSString stringWithFormat:@"%@/%@", [self cachesPath], name];
+}
+
+#pragma mark-  private methods
+
++ (NSString *)searchPathFrom:(NSSearchPathDirectory)directory {
+    return NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES)[0];
+}
+
+@end
+
+
+
+#pragma mark-  Project
+
+@implementation NSString (Project)
+
++ (NSString *)shortVersion {
+    return [self objectFromMainBundleForKey:@"CFBundleShortVersionString"];
+}
+
++ (NSInteger)buildVersion {
+    return [self objectFromMainBundleForKey:@"CFBundleVersion"].integerValue;
+}
+
++ (NSString *)identifier {
+    return [self objectFromMainBundleForKey:@"CFBundleIdentifier"];
+}
+
++ (NSString *)objectFromMainBundleForKey:(NSString *)key {
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    return  [infoDictionary objectForKey:key];
+}
+
++ (NSString *)uuid {
+    // 生成随机不重复的uuid
+    CFUUIDRef puuid = CFUUIDCreate(nil);
+    CFStringRef uuidString = CFUUIDCreateString(nil, puuid);
+    NSString *str_uuid = (NSString *)CFBridgingRelease(CFStringCreateCopy(NULL, uuidString));
+    
+    // OC风格的创建 ：NSString *str_uuid = [[NSUUID UUID] UUIDString];
+    // 将生成的uuid中的@"-"去掉
+    NSString *str_name = [str_uuid stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    CFRelease(puuid);
+    CFRelease(uuidString);
+    return str_name;
+}
+
+
+@end
+
+

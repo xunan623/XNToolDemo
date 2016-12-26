@@ -112,8 +112,37 @@
 
 
 
+/**
+ 返回是否是同一天
+ */
+- (BOOL)isSameDayWith:(NSDate *)date;
+
+/**
+ 返回周类型字符串
+ */
++ (NSString *)weekdayStringWithDate:(NSDate *)date;
 
 
+/**
+ 当前时间的前 年月
+ */
++ (NSDate *)beforeYear:(NSInteger)year month:(NSInteger)month;
+/**
+ 当前时间的前 年月日
+ */
++ (NSDate *)beforeYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;\
+
+
+/**
+ 返回整个带周的字符串
+ */
++ (NSString *)fullWeekdayStringWithDate:(NSDate *)date;
+
+
+/**
+ 根据带周字符串返回NSDate   
+ */
++ (NSDate *)dateFromFullWeekdayString:(NSString *)dateString;
 
 
 

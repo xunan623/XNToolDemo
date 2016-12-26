@@ -8,7 +8,24 @@
 
 #import "NSDate+Ext.h"
 
+static NSDateFormatter *weekdayFormatter = nil;
+static NSDateFormatter *fulldateFormatter = nil;
+static dispatch_once_t onceToken;
+
+
 @implementation NSDate (Ext)
+
++ (NSCalendar *)currentCalendar {
+    static dispatch_once_t once = 0;
+    static NSCalendar *calendar;
+    
+    dispatch_once(&once, ^{
+        calendar            = [NSCalendar currentCalendar];
+        calendar.timeZone   = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    });
+    
+    return calendar;
+}
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {
     NSDate *currentDate = [NSDate dateWithTimeIntervalSince1970:interval / 1000.0];
@@ -219,5 +236,83 @@
         }
     }
     return page;
+}
+
+- (BOOL)isSameDayWith:(NSDate *)date {
+    double timezoneFix = [NSTimeZone localTimeZone].secondsFromGMT;
+    return (int)(([self timeIntervalSince1970] + timezoneFix)/(24*3600)) -
+    (int)(([date timeIntervalSince1970] + timezoneFix)/(24*3600))
+    == 0;
+}
+
++ (NSString *)weekdayStringWithDate:(NSDate *)date {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        weekdayFormatter = [[NSDateFormatter alloc]init];
+        [weekdayFormatter setDateFormat:@"MM月dd日 EEEE"];
+        [weekdayFormatter setWeekdaySymbols:@[@"星期日",
+                                              @"星期一",
+                                              @"星期二",
+                                              @"星期三",
+                                              @"星期四",
+                                              @"星期五",
+                                              @"星期六"]];
+    });
+    return [weekdayFormatter stringFromDate:date];
+}
+
+
++ (NSString *)fullWeekdayStringWithDate:(NSDate *)date {
+    dispatch_once(&onceToken, ^{
+        fulldateFormatter = [[NSDateFormatter alloc]init];
+        [fulldateFormatter setDateFormat:@"yyyy-MM-dd EEEE HH:mm"];
+        [fulldateFormatter setWeekdaySymbols:@[@"星期日",
+                                               @"星期一",
+                                               @"星期二",
+                                               @"星期三",
+                                               @"星期四",
+                                               @"星期五",
+                                               @"星期六"]];
+    });
+    
+    return [fulldateFormatter stringFromDate:date];
+}
+
++ (NSDate *)dateFromFullWeekdayString:(NSString *)dateString {
+    dispatch_once(&onceToken, ^{
+        fulldateFormatter = [[NSDateFormatter alloc]init];
+        fulldateFormatter.timeZone  = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+        [fulldateFormatter setDateFormat:@"yyyy-MM-dd EEEE HH:mm"];
+        [fulldateFormatter setWeekdaySymbols:@[@"星期日",
+                                               @"星期一",
+                                               @"星期二",
+                                               @"星期三",
+                                               @"星期四",
+                                               @"星期五",
+                                               @"星期六"]];
+    });
+    return [fulldateFormatter dateFromString:dateString];
+}
+
+
++ (NSDate *)beforeYear:(NSInteger)year month:(NSInteger)month {
+    //计算生日
+    NSDate *now     = [NSDate date];
+    NSDateComponents *com = [[self currentCalendar] components:NSCalendarUnitMonth fromDate:now];
+    
+    com.month   = -(year*12+month);
+    
+    return [[self currentCalendar] dateByAddingComponents:com toDate:now options:NSCalendarMatchFirst];
+}
+
++ (NSDate *)beforeYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
+    NSDate *now     = [NSDate date];
+    NSDateComponents *com = [[self currentCalendar] components:NSCalendarUnitMonth | NSCalendarUnitDay fromDate:now];
+    
+    com.month   = -(year*12+month);
+    com.day     = day;
+    
+    return [[self currentCalendar] dateByAddingComponents:com toDate:now options:NSCalendarMatchFirst];
 }
 @end
