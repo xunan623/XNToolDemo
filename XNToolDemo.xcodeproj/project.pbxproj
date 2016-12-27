@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711B56461E1201280032CCB2 /* XNSimpleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 711B56451E1201280032CCB2 /* XNSimpleTool.m */; };
+		711B56491E1201BF0032CCB2 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 711B56481E1201BF0032CCB2 /* SSKeychain.m */; };
 		7128DCEA1E0B654800656DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCE91E0B654800656DC0 /* main.m */; };
 		7128DCED1E0B654800656DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEC1E0B654800656DC0 /* AppDelegate.m */; };
 		7128DCF01E0B654800656DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEF1E0B654800656DC0 /* ViewController.m */; };
@@ -26,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711B56441E1201280032CCB2 /* XNSimpleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNSimpleTool.h; sourceTree = "<group>"; };
+		711B56451E1201280032CCB2 /* XNSimpleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNSimpleTool.m; sourceTree = "<group>"; };
+		711B56471E1201BF0032CCB2 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		711B56481E1201BF0032CCB2 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		7128DCE51E0B654800656DC0 /* XNToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7128DCE91E0B654800656DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7128DCEB1E0B654800656DC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 		71F4C50C1E11152500472635 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				711B56471E1201BF0032CCB2 /* SSKeychain.h */,
+				711B56481E1201BF0032CCB2 /* SSKeychain.m */,
 				71F4C50D1E11152500472635 /* Foundation+Log.m */,
 				71F4C50E1E11152500472635 /* NSDate+Ext.h */,
 				71F4C50F1E11152500472635 /* NSDate+Ext.m */,
@@ -143,6 +151,8 @@
 				71F4C5161E11152500472635 /* UITextField+Ext.h */,
 				71F4C5171E11152500472635 /* UITextField+Ext.m */,
 				71F4C5181E11152500472635 /* XNConstDefine.h */,
+				711B56441E1201280032CCB2 /* XNSimpleTool.h */,
+				711B56451E1201280032CCB2 /* XNSimpleTool.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -248,6 +258,8 @@
 				71F4C5281E11152500472635 /* RWDatabase.m in Sources */,
 				7128DCEA1E0B654800656DC0 /* main.m in Sources */,
 				71F4C5271E11152500472635 /* CocoaCracker.m in Sources */,
+				711B56461E1201280032CCB2 /* XNSimpleTool.m in Sources */,
+				711B56491E1201BF0032CCB2 /* SSKeychain.m in Sources */,
 				71F4C5231E11152500472635 /* NSObject+Notification.m in Sources */,
 				71F4C5251E11152500472635 /* UIImage+Reflection.m in Sources */,
 				71F4C5211E11152500472635 /* Foundation+Log.m in Sources */,
