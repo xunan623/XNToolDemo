@@ -15,6 +15,7 @@
 		7128DCF31E0B654800656DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF11E0B654800656DC0 /* Main.storyboard */; };
 		7128DCF51E0B654800656DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF41E0B654800656DC0 /* Assets.xcassets */; };
 		7128DCF81E0B654800656DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF61E0B654800656DC0 /* LaunchScreen.storyboard */; };
+		716D7C151E15F43700BE4486 /* XNGCDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 716D7C141E15F43700BE4486 /* XNGCDHelper.m */; };
 		71F4C50A1E11110800472635 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F4C5091E11110800472635 /* libsqlite3.0.tbd */; };
 		71F4C5211E11152500472635 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C50D1E11152500472635 /* Foundation+Log.m */; };
 		71F4C5221E11152500472635 /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C50F1E11152500472635 /* NSDate+Ext.m */; };
@@ -42,6 +43,9 @@
 		7128DCF41E0B654800656DC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7128DCF71E0B654800656DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7128DCF91E0B654800656DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		716D7C131E15F43700BE4486 /* XNGCDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGCDHelper.h; sourceTree = "<group>"; };
+		716D7C141E15F43700BE4486 /* XNGCDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGCDHelper.m; sourceTree = "<group>"; };
+		716D7C161E1606B400BE4486 /* XNGlobalConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XNGlobalConst.h; sourceTree = "<group>"; };
 		71F4C5091E11110800472635 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		71F4C50D1E11152500472635 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		71F4C50E1E11152500472635 /* NSDate+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
@@ -153,6 +157,9 @@
 				71F4C5181E11152500472635 /* XNConstDefine.h */,
 				711B56441E1201280032CCB2 /* XNSimpleTool.h */,
 				711B56451E1201280032CCB2 /* XNSimpleTool.m */,
+				716D7C131E15F43700BE4486 /* XNGCDHelper.h */,
+				716D7C141E15F43700BE4486 /* XNGCDHelper.m */,
+				716D7C161E1606B400BE4486 /* XNGlobalConst.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 				71F4C5281E11152500472635 /* RWDatabase.m in Sources */,
 				7128DCEA1E0B654800656DC0 /* main.m in Sources */,
 				71F4C5271E11152500472635 /* CocoaCracker.m in Sources */,
+				716D7C151E15F43700BE4486 /* XNGCDHelper.m in Sources */,
 				711B56461E1201280032CCB2 /* XNSimpleTool.m in Sources */,
 				711B56491E1201BF0032CCB2 /* SSKeychain.m in Sources */,
 				71F4C5231E11152500472635 /* NSObject+Notification.m in Sources */,
