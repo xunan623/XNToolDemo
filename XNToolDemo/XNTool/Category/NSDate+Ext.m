@@ -79,6 +79,13 @@ static dispatch_once_t onceToken;
     return [[NSDate date] timeIntervalSince1970];
 }
 
++ (NSTimeInterval)timeIntervalWith:(NSString *)dateString {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date = [[NSDate alloc] init];
+    date = [dateFormatter dateFromString:dateString];
+    return [date timeIntervalSince1970];
+}
 
 + (NSDate *)transformWithDate:(NSTimeInterval)interval {
     return [NSDate dateWithTimeIntervalSince1970:interval];

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		711B56461E1201280032CCB2 /* XNSimpleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 711B56451E1201280032CCB2 /* XNSimpleTool.m */; };
 		711B56491E1201BF0032CCB2 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 711B56481E1201BF0032CCB2 /* SSKeychain.m */; };
+		7121E8C51E67F34A00EF8D4B /* UIView+EasyShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7121E8C41E67F34A00EF8D4B /* UIView+EasyShow.m */; };
+		7121E8E41E681BF500EF8D4B /* AppDelegate+Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7121E8E11E681BF500EF8D4B /* AppDelegate+Reachability.m */; };
+		7121E8E51E681BF500EF8D4B /* UITableView+EmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7121E8E31E681BF500EF8D4B /* UITableView+EmptyData.m */; };
+		7121E8E81E681C1700EF8D4B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7121E8E71E681C1700EF8D4B /* Reachability.m */; };
 		7128DCEA1E0B654800656DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCE91E0B654800656DC0 /* main.m */; };
 		7128DCED1E0B654800656DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEC1E0B654800656DC0 /* AppDelegate.m */; };
 		7128DCF01E0B654800656DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7128DCEF1E0B654800656DC0 /* ViewController.m */; };
@@ -16,6 +20,7 @@
 		7128DCF51E0B654800656DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF41E0B654800656DC0 /* Assets.xcassets */; };
 		7128DCF81E0B654800656DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7128DCF61E0B654800656DC0 /* LaunchScreen.storyboard */; };
 		716D7C151E15F43700BE4486 /* XNGCDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 716D7C141E15F43700BE4486 /* XNGCDHelper.m */; };
+		71DDAA7F1E76990600A37F09 /* UIView+XNGetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDAA7E1E76990600A37F09 /* UIView+XNGetController.m */; };
 		71F4C50A1E11110800472635 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F4C5091E11110800472635 /* libsqlite3.0.tbd */; };
 		71F4C5211E11152500472635 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C50D1E11152500472635 /* Foundation+Log.m */; };
 		71F4C5221E11152500472635 /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F4C50F1E11152500472635 /* NSDate+Ext.m */; };
@@ -33,6 +38,14 @@
 		711B56451E1201280032CCB2 /* XNSimpleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNSimpleTool.m; sourceTree = "<group>"; };
 		711B56471E1201BF0032CCB2 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		711B56481E1201BF0032CCB2 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		7121E8C31E67F34A00EF8D4B /* UIView+EasyShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyShow.h"; sourceTree = "<group>"; };
+		7121E8C41E67F34A00EF8D4B /* UIView+EasyShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyShow.m"; sourceTree = "<group>"; };
+		7121E8E01E681BF500EF8D4B /* AppDelegate+Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Reachability.h"; sourceTree = "<group>"; };
+		7121E8E11E681BF500EF8D4B /* AppDelegate+Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Reachability.m"; sourceTree = "<group>"; };
+		7121E8E21E681BF500EF8D4B /* UITableView+EmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EmptyData.h"; sourceTree = "<group>"; };
+		7121E8E31E681BF500EF8D4B /* UITableView+EmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+EmptyData.m"; sourceTree = "<group>"; };
+		7121E8E61E681C1700EF8D4B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7121E8E71E681C1700EF8D4B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7128DCE51E0B654800656DC0 /* XNToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7128DCE91E0B654800656DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7128DCEB1E0B654800656DC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +59,8 @@
 		716D7C131E15F43700BE4486 /* XNGCDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGCDHelper.h; sourceTree = "<group>"; };
 		716D7C141E15F43700BE4486 /* XNGCDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGCDHelper.m; sourceTree = "<group>"; };
 		716D7C161E1606B400BE4486 /* XNGlobalConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XNGlobalConst.h; sourceTree = "<group>"; };
+		71DDAA7D1E76990600A37F09 /* UIView+XNGetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XNGetController.h"; sourceTree = "<group>"; };
+		71DDAA7E1E76990600A37F09 /* UIView+XNGetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XNGetController.m"; sourceTree = "<group>"; };
 		71F4C5091E11110800472635 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		71F4C50D1E11152500472635 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		71F4C50E1E11152500472635 /* NSDate+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
@@ -141,9 +156,19 @@
 		71F4C50C1E11152500472635 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				71DDAA7D1E76990600A37F09 /* UIView+XNGetController.h */,
+				71DDAA7E1E76990600A37F09 /* UIView+XNGetController.m */,
+				7121E8E61E681C1700EF8D4B /* Reachability.h */,
+				7121E8E71E681C1700EF8D4B /* Reachability.m */,
+				7121E8E01E681BF500EF8D4B /* AppDelegate+Reachability.h */,
+				7121E8E11E681BF500EF8D4B /* AppDelegate+Reachability.m */,
+				7121E8E21E681BF500EF8D4B /* UITableView+EmptyData.h */,
+				7121E8E31E681BF500EF8D4B /* UITableView+EmptyData.m */,
 				711B56471E1201BF0032CCB2 /* SSKeychain.h */,
 				711B56481E1201BF0032CCB2 /* SSKeychain.m */,
 				71F4C50D1E11152500472635 /* Foundation+Log.m */,
+				7121E8C31E67F34A00EF8D4B /* UIView+EasyShow.h */,
+				7121E8C41E67F34A00EF8D4B /* UIView+EasyShow.m */,
 				71F4C50E1E11152500472635 /* NSDate+Ext.h */,
 				71F4C50F1E11152500472635 /* NSDate+Ext.m */,
 				71F4C5101E11152500472635 /* NSObject+Notification.h */,
@@ -260,16 +285,21 @@
 				71F4C5221E11152500472635 /* NSDate+Ext.m in Sources */,
 				7128DCF01E0B654800656DC0 /* ViewController.m in Sources */,
 				71F4C5241E11152500472635 /* NSString+Ext.m in Sources */,
+				7121E8C51E67F34A00EF8D4B /* UIView+EasyShow.m in Sources */,
 				71F4C5291E11152500472635 /* RWDatabaseManager.m in Sources */,
 				7128DCED1E0B654800656DC0 /* AppDelegate.m in Sources */,
 				71F4C5281E11152500472635 /* RWDatabase.m in Sources */,
 				7128DCEA1E0B654800656DC0 /* main.m in Sources */,
 				71F4C5271E11152500472635 /* CocoaCracker.m in Sources */,
 				716D7C151E15F43700BE4486 /* XNGCDHelper.m in Sources */,
+				7121E8E81E681C1700EF8D4B /* Reachability.m in Sources */,
+				7121E8E41E681BF500EF8D4B /* AppDelegate+Reachability.m in Sources */,
+				7121E8E51E681BF500EF8D4B /* UITableView+EmptyData.m in Sources */,
 				711B56461E1201280032CCB2 /* XNSimpleTool.m in Sources */,
 				711B56491E1201BF0032CCB2 /* SSKeychain.m in Sources */,
 				71F4C5231E11152500472635 /* NSObject+Notification.m in Sources */,
 				71F4C5251E11152500472635 /* UIImage+Reflection.m in Sources */,
+				71DDAA7F1E76990600A37F09 /* UIView+XNGetController.m in Sources */,
 				71F4C5211E11152500472635 /* Foundation+Log.m in Sources */,
 				71F4C5261E11152500472635 /* UITextField+Ext.m in Sources */,
 			);

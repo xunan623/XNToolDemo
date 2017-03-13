@@ -12,6 +12,7 @@
 #import <net/if.h>
 #import <net/if_dl.h>
 #import "SSKeychain.h"
+#import <UIKit/UIKit.h>
 
 @implementation XNSimpleTool
 
@@ -143,6 +144,16 @@
     
 }
 
++ (NSString *)getIOSVersion
+{
+    return [[UIDevice currentDevice] systemVersion] ;
+}
+
++ (NSString *)getApplyVersion {
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    return [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    
+}
 
 
 @end

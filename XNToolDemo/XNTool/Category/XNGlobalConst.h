@@ -43,6 +43,16 @@
 #define XNRandomColor ZYColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 // 图片
+#define XNImage_Named(name) [UIImage imageNamed:name]
+#define XNImage_File(file, ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:file ofType:ext]]
+#define XNImage_FileFullName(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
+
+// 沙盒路径
+#define XNSandBox_Documents [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+#define XNSandBox_Caches    [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+#define XNSandBox_Temporary NSTemporaryDirectory()
+#define XnSandBox_Root      NSHomeDirectory()
+
 
 
 // 打印

@@ -54,6 +54,10 @@
  */
 + (NSTimeInterval)timeIntervalSince1970;
 
+/**
+ 给定一个时间字符串 1970到dateString的秒数  yyyy-MM-dd hh:mm:ss
+ */
++ (NSTimeInterval)timeIntervalWith:(NSString *)dateString;
 
 
 /**
